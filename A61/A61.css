@@ -1,0 +1,44 @@
+/* estilo.css */
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para a tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px; /* Largura máxima da tabela */
+    margin-top: 50px; /* Espaçamento superior */
+}
+
+/* Estilo para as células da tabela */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para a célula à direita (Nome) */
+td:first-child {
+    text-align: right;
+    font-weight: bold;
+    width: 30%; /* Largura da célula à direita */
+}
+
+/* Estilo para a caixa de texto */
+input[type="text"] {
+    width: 100%; /* Largura total da caixa de texto */
+    padding: 8px;
+    box-sizing: border-box; /* Incluir padding e borda na largura total */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo para a caixa de texto em foco */
+input[type="text"]:focus {
+    border-color: #007BFF; /* Cor da borda quando em foco */
+    outline: none; /* Remover contorno padrão */
+}

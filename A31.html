@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Pizza</title>
+
+    <style>
+        body {
+            background-color: green; 
+    
+        }
+
+        h1 {
+            text-align: center;
+    
+        }
+ 
+        
+
+        
+    </style>
+</head>
+
+ 
+<body>
+
+
+<h1 class="h1">Pizza Online</h1>
+
+<form action="#" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required><br><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required><br><br>
+
+    <label for="tamanho">Tamanho:</label>
+    <select id="tamanho" name="tamanho">
+        <option value="pequena">Pequena</option>
+        <option value="media">Média</option>
+        <option value="grande">Grande</option>
+
+    </select><br><br>
+
+    <label>Ingredientes:</label><br>
+    <input type="checkbox" id="mussarela" name="ingredientes" value="mussarela">
+    <label for="mussarela">Mussarela</label><br>
+
+    <input type="checkbox" id="calabresa" name="ingredientes" value="calabresa">
+    <label for="calabresa">Calabresa</label><br>
+
+    <input type="checkbox" id="atum" name="ingredientes" value="atum">
+    <label for="atum">Atum</label><br>
+
+    <input type="checkbox" id="4 queijos" name="ingredientes" value="4 queijos">
+    <label for="4 queijos">4 queijos</label><br>
+
+    <input type="checkbox" id="Nenhum" name="ingredientes" value="Nenhum">
+    <label for="Nenhum">Nenhum</label><br><br>
+
+    <label for="observacoes">Observações:</label><br>
+    <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Enviar Pedido">
+</form>
+
+</body>
+</html>

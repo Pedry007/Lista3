@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário</title>
+    <script>
+        // Função para validar o CPF
+        function validarCPF(cpf) {
+            var numeros = cpf.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+            if (numeros.length !== 11) {
+                return false;
+            }
+            return true;
+        }
+
+        // Função para aplicar a máscara no CPF
+        function mascaraCPF(cpf) {
+            cpf.value = cpf.value.replace(/\D/g, '') // Remove todos os caracteres não numéricos
+                                 .replace(/(\d{3})(\d)/, '$1.$2') // Coloca um ponto após os primeiros 3 dígitos
+                                 .replace(/(\d{3})(\d)/, '$1.$2') // Coloca um ponto após os próximos 3 dígitos
+                                 .replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca um traço após os últimos 3 dígitos
+        }
+
+        // Função para validar o formulário
+        function validarFormulario() {
+            var nome = document.f1.nome.value;
+            var cpf = document.f1.cpf.value;
+            var datanascimento = document.f1.datanascimento.value;
+
+            // Verificar se todos os campos estão preenchidos
+            if (nome === '' || cpf === '' || datanascimento === '') {
+                alert('Todos os campos devem ser preenchidos.');
+                return false;
+            }
+
+            // Verificar se o CPF contém apenas números
+            if (!validarCPF(cpf)) {
+                alert('O CPF deve conter apenas números.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="f1" onsubmit="return validarFormulario();">
+        <h3>Formulário de Inscrição:</h3>
+        <hr>
+        Nome:<br>
+        <input type="text" name="nome"><br>
+        CPF:<br>
+        <input type="text" name="cpf" onkeyup="mascaraCPF(this);" onkeydown="mascaraCPF(this);"><br>
+        Data de Nascimento:<br>
+        <input type="text" name="datanascimento" placeholder="dd-mm-yyyy"><br><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+</body>
+</html>
